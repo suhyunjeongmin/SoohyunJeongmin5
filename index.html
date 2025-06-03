@@ -148,7 +148,30 @@
                     </tbody>
                 </table>
 
-                <p>수현 &hearts; 정민의 결혼식이 {{ diff }}일 남았습니다.</p>
+
+  <script>
+    const targetDate = new Date("2025-12-31T00:00:00"); // 디데이 설정
+
+    function updateCountdown() {
+      const now = new Date();
+      const diffTime = targetDate - now;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      const countdownEl = document.getElementById("countdown");
+
+      if (diffDays > 0) {
+        countdownEl.textContent = `D-${diffDays}`;
+      } else if (diffDays === 0) {
+        countdownEl.textContent = "D-DAY";
+      } else {
+        countdownEl.textContent = `D+${Math.abs(diffDays)}`;
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // 1분마다 업데이트
+  </script>
+		    <p>수현 &hearts; 정민의 결혼식이 {{ diff }}일 남았습니다.</p>
                 <hr>
             </div>
             <div class="row1 guestbook-row">
