@@ -149,7 +149,7 @@
                 </table>
 
 <div class="container">
-    <h1>D-Day</h1>
+   
     <div id="countdown">Loading...</div>
   </div>
   <script>
@@ -163,7 +163,7 @@
       const countdownEl = document.getElementById("countdown");
 
       if (diffDays > 0) {
-        countdownEl.textContent = `수현 &hearts; 정민의 결혼식이${diffDays}일 남았습니다.`;
+        countdownEl.textContent = `수현 ♥ 정민의 결혼식이 ${diffDays} 일 남았습니다.`;
       } else if (diffDays === 0) {
         countdownEl.textContent = "D-DAY";
       } else {
@@ -174,7 +174,7 @@
     updateCountdown();
     setInterval(updateCountdown, 60000); // 1분마다 업데이트
   </script>
-		    <p>수현 &hearts; 정민의 결혼식이 {{ diff }}일 남았습니다.</p>
+		    <!--<p>수현 &hearts; 정민의 결혼식이 {{ diff }}일 남았습니다.</p>-->
                 <hr>
             </div>
             <div class="row1 guestbook-row">
