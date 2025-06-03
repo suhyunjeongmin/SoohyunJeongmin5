@@ -291,12 +291,30 @@
     <script src="/SoohyunJeongmin5/templates/pureSnow.js"></script>
    
 		<div class="music-player">
-    <h1>🎶 분위기 좋은 음악</h1>
-    <audio controls>
+    <h1>🎶</h1>
+    <audio id="bg-music" autoplay loop>
       <source src="/SoohyunJeongmin5/templates/music.mp3" type="audio/mpeg">
       브라우저가 오디오 태그를 지원하지 않습니다.
     </audio>
   </div>
+
+  <script>
+    // 자동 재생이 막히는 경우 사용자 상호작용으로 시작
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('bg-music');
+      const playAudio = () => {
+        audio.play().catch(() => {
+          // 재생 실패 시 대체 안내 또는 무음 재생
+          console.warn('자동 재생 차단됨. 사용자 상호작용 필요');
+        });
+      };
+
+      playAudio();
+
+      // 사용자 클릭 시 다시 시도 (브라우저 정책 우회용)
+      document.body.addEventListener('click', playAudio, { once: true });
+    });
+  </script>
 		
 </body>
 <footer><div class="footer1">Made by SooHyun :) </div></footer>
