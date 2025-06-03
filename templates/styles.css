@@ -215,32 +215,32 @@ body {
 
 .css-heart {
   position: relative;
-  width: 28px;
-  height: 25px;
+  width: 22px;
+  height: 20px;
   background: red;
   transform: rotate(-45deg);
   margin: auto;
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .css-heart::before,
 .css-heart::after {
   content: "";
   position: absolute;
-  width: 28px;
-  height: 25px;
+  width: 22px;
+  height: 20px;
   background: red;
   border-radius: 50%;
 }
 
 .css-heart::before {
-  top: -14px;
+  top: -11px;
   left: 0;
 }
 
 .css-heart::after {
   top: 0;
-  left: 14px;
+  left: 11px;
 }
 
 .heart-number {
@@ -249,9 +249,9 @@ body {
   left: 50%;
   transform: rotate(45deg) translate(-50%, -50%);
   color: white;
-  font-size: 11px;
+  font-size: 14px; /* 원래대로 복구 */
   font-weight: bold;
   z-index: 1;
   pointer-events: none;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
